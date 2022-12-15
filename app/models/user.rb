@@ -6,7 +6,7 @@ class User < ApplicationRecord
          
     # User モデルに PostImage モデルを関連付ける
    has_many :post_images, dependent: :destroy
-   
+   has_many :post_comments, dependent: :destroy
    has_one_attached :profile_image
   
   def get_profile_image(width, height)
